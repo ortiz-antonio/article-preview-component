@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-two-dash-bem"],
+  "rules": {
+    "number-max-precision": null,
+    "no-duplicate-selectors": null
+  }
+}
