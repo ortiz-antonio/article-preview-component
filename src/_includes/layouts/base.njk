@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% include "partials/meta-info.njk" %}
+
+    <link rel="stylesheet" href="css/global.css" />
+
+    {# Add facility for pages to declare an array of stylesheet paths #}
+
+    {%
+      if
+      pageStylesheets
+    %}
+      {% for item in pageStylesheets %}
+        <link
+          rel="stylesheet"
+          media="print"
+          href="{{ item }}"
+          onload="this.media='all'"
+        />
+      {% endfor %}
+    {% endif %}
+  </head>
+  <body>
+    <div class="container wrapper">
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+      <footer>
+        <p class="attribution">
+          <span
+            >Challenge by
+            <a
+              class="attribution__link"
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >.
+          </span>
+
+          <span>
+            Coded by
+            <a class="attribution__link" href="{{ site.authorSite }}"
+              >{{ site.authorName }}</a
+            >
+          </span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

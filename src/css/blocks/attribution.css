@@ -1,0 +1,19 @@
+.attribution {
+  text-align: center;
+  text-wrap: balance;
+}
+
+.attribution__link {
+  color: var(--color-base);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    padding: 2px;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+}

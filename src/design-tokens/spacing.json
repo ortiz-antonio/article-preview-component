@@ -1,0 +1,111 @@
+{
+  "title": "Spacing",
+  "description": "Consistent spacing sizes, based on a ratio, with min and max sizes. This allows you to set spacing based on the context size. For example, min for mobile and max for desktop browsers.",
+  "items": [
+    {
+      "name": "3xs",
+      "min": 5,
+      "max": 6
+    },
+    {
+      "name": "2xs",
+      "min": 9,
+      "max": 11
+    },
+    {
+      "name": "xs",
+      "min": 14,
+      "max": 17
+    },
+    {
+      "name": "s",
+      "min": 18,
+      "max": 22
+    },
+    {
+      "name": "m",
+      "min": 18,
+      "max": 22
+    },
+    {
+      "name": "l",
+      "min": 36,
+      "max": 44
+    },
+    {
+      "name": "xl",
+      "min": 54,
+      "max": 66
+    },
+    {
+      "name": "2xl",
+      "min": 72,
+      "max": 88
+    },
+    {
+      "name": "3xl",
+      "min": 108,
+      "max": 132
+    },
+    {
+      "name": "4xl",
+      "min": 126,
+      "max": 154
+    },
+    {
+      "name": "3xs-2xs",
+      "min": 5,
+      "max": 11
+    },
+    {
+      "name": "2xs-xs",
+      "min": 9,
+      "max": 17
+    },
+    {
+      "name": "xs-s",
+      "min": 14,
+      "max": 22
+    },
+    {
+      "name": "s-m",
+      "min": 18,
+      "max": 22
+    },
+    {
+      "name": "m-l",
+      "min": 18,
+      "max": 44
+    },
+    {
+      "name": "l-xl",
+      "min": 36,
+      "max": 66
+    },
+    {
+      "name": "xl-2xl",
+      "min": 54,
+      "max": 88
+    },
+    {
+      "name": "2xl-3xl",
+      "min": 72,
+      "max": 132
+    },
+    {
+      "name": "3xl-4xl",
+      "min": 108,
+      "max": 154
+    },
+    {
+      "name": "s-l",
+      "min": 18,
+      "max": 44
+    },
+    {
+      "name": "xs-m",
+      "min": 14,
+      "max": 22
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Article Preview Component",
+  "project": "article-preview-component",
+  "description": "Frontend mentor article preview component: cubecss and eleventy",
+  "template": "fem-cube-eleventy",
+  "repository_url": "git@github.com:ortiz-antonio/article-preview-component.git",
+  "homepage": "https://ortiz-antonio.github.io/article-preview-component",
+  "directory": "/home/ortiz/dev/frontend-mentor/article-preview-component",
+  "author": {
+    "name": "Antonio Ortiz",
+    "username": "ortiz-antonio",
+    "url": "https://ortiz.studio"
+  }
+}
