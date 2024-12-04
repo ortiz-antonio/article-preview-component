@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
-
+<img alt="" src="{{coverImg}}"/>
 {{ title }}
 {{ summary }}
 
@@ -8,6 +8,7 @@
   <img alt="" src="{{ avatar }}" width="50" height="50" />
   {{ author }}
   {{ publishedFormated }}
-  <img alt="Share article" src="./images/icon-share.svg" />
+  <img alt="Share article" src="./images/icon-share.svg" width="25" height="25"/>
 
 {% endblock %}
+ 

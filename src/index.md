@@ -9,6 +9,8 @@ summary: |
   it felt slightly bare and uninviting. I’ve got some simple tips 
   to help you make any room feel complete.
 
+coverImg: "images/drawers.jpg"
+
 socialImage: "images/favicon-32x32.png"
 author: "Michelle Appleton"
 avatar: "./images/avatar-michelle.jpg"
