@@ -75,11 +75,21 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
-/* @font-face here */
+/* manrope-500 - latin */
 @font-face {
-  font-family: shantell;
-  font-display: fallback;
-  src: url('../fonts/ShantellSans[BNCE,INFM,SPAC,ital,wght].woff2') format('woff');
+  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/manrope-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* manrope-700 - latin */
+@font-face {
+  font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/manrope-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 :root{
   --color-dark: #030303;
@@ -116,7 +126,7 @@ textarea:not([rows]) {
   --leading-fine: 1.15;
   --leading-standard: 1.5;
   --leading-loose: 1.7;
-  --font-base: shantell,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  --font-base: Manrope,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 700;
@@ -249,6 +259,17 @@ Consistent block padding for page sections
 VISUALLY HIDDEN UTILITY
 Info: https://piccalil.li/quick-tip/visually-hidden/ 
 */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
 :root {
   --gutter: var(--space-s-l);
   --transition-base: 250ms ease;
@@ -273,4 +294,7 @@ body {
 }
 .block{
   display: block;
+}
+.table{
+  display: table;
 }
