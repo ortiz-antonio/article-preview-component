@@ -134,6 +134,9 @@ textarea:not([rows]) {
   --breakpoint-md: 47.5rem;
   --breakpoint-lg: 75rem;
 }
+.article menu {
+  list-style: none;
+}
 .attribution {
   text-align: center;
   text-wrap: balance;
@@ -294,7 +297,4 @@ body {
 }
 .block{
   display: block;
-}
-.table{
-  display: table;
 }
