@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include "partials/meta-info.njk" %}
 
+    <script defer src="js/article.js"></script>
+
     <link rel="stylesheet" href="css/global.css" />
 
     {# Add facility for pages to declare an array of stylesheet paths #}
@@ -28,6 +30,7 @@
   <body>
     <div class="container wrapper">
       <main>
+        <h1 class="visually-hidden">Frontend Mentor Blog</h1>
         {% block content %}{% endblock %}
       </main>
       <footer>

@@ -4,6 +4,7 @@ module.exports = config => {
 
   // config.addFilter('md', require('./src/filters/md.js'))
   config.addWatchTarget('./src/css/**/*.css');
+  config.addWatchTarget('./src/js/**/*.js');
   config.setWatchThrottleWaitTime(300);
   return {
     markdownTemplateEngine: 'njk',

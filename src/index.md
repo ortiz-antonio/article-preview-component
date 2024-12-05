@@ -10,6 +10,7 @@ summary: |
   to help you make any room feel complete.
 
 coverImg: "images/drawers.jpg"
+coverImgAlt: "A vintage green solid wood side table decorated with two portraits and a vase of dry natural elements."
 
 socialImage: "images/favicon-32x32.png"
 author: "Michelle Appleton"
