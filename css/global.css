@@ -134,10 +134,10 @@ textarea:not([rows]) {
   --breakpoint-md: 47.5rem;
   --breakpoint-lg: 75rem;
 }
-.article  {
+.article {
   /* Article css code */
 }
-#social-share{
+#social-share {
   /*   list-style:none; */
 }
 .attribution {
