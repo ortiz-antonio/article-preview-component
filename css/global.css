@@ -137,6 +137,9 @@ textarea:not([rows]) {
 .article  {
   /* Article css code */
 }
+#social-share{
+  /*   list-style:none; */
+}
 .attribution {
   text-align: center;
   text-wrap: balance;
