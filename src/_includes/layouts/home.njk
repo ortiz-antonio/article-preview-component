@@ -9,15 +9,8 @@
     <h3>{{ author }}</h3>
     <time datetime={{published}}>{{ publishedFormated }}</time>
 
-
-    <!--
-         show/hide with js on button click,
-         on load js change aria-expanded to false
-         and hide block
-    -->
     <div class="article__share" id="articleShare">
       <p id="share">SHARE</p>
-
       <ul role="menu" aria-labelledby="share" id="social-share">
         <li role="none">
           <a role="menuitem" href="#fb">
@@ -37,11 +30,6 @@
           </a>
         </li>
       </ul>
-      <!--
-         show/hide with js on button click,
-         on load js change aria-expanded to false
-         and hide block
-    -->
     </div>
   </div>
 {% endblock %}
