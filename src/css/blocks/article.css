@@ -3,9 +3,25 @@
 }
 
 .article__footer {
+  position:relative;
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+}
+
+.article__share {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.article__share {
+  position: absolute;
+  z-index:10;
+  @media screen(md){
+    top:-2em;
+    right:-1.5em;
+  }
 }
 
 #social-share {
@@ -13,3 +29,4 @@
   align-items: center;
   list-style: none;
 }
+
