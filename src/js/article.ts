@@ -1,11 +1,11 @@
 // Get DOM elements with type safety
 const socialShareMenu = document.getElementById(
-  "social-share",
+  'social-share',
 ) as HTMLElement | null;
 const articleFooter = document.getElementById(
-  "articleFooter",
+  'articleFooter',
 ) as HTMLElement | null;
-const menuTitle = document.getElementById("share") as HTMLElement | null;
+const menuTitle = document.getElementById('share') as HTMLElement | null;
 
 let isMenuExpanded = false;
 
@@ -24,12 +24,12 @@ const buttonShare = `
 `;
 
 if (articleFooter) {
-  articleFooter.insertAdjacentHTML("beforeend", buttonShare);
+  articleFooter.insertAdjacentHTML('beforeend', buttonShare);
 
-  articleFooter.addEventListener("click", (e: MouseEvent) => {
+  articleFooter.addEventListener('click', (e: MouseEvent) => {
     const target = e.target as HTMLElement | null;
     const button = target?.closest(
-      ".article__footer--share",
+      '.article__footer--share',
     ) as HTMLElement | null;
     if (button) {
       toggleMenu(button);
@@ -40,16 +40,16 @@ if (articleFooter) {
 function toggleMenu(button: HTMLElement): void {
   isMenuExpanded = !isMenuExpanded;
 
-  button.setAttribute("aria-expanded", isMenuExpanded.toString());
+  button.setAttribute('aria-expanded', isMenuExpanded.toString());
   setDisplay();
 }
 
 function setDisplay() {
-  let display = "";
+  let display = '';
   if (isMenuExpanded) {
-    display = "flex";
+    display = 'flex';
   } else {
-    display = "none";
+    display = 'none';
   }
 
   if (socialShareMenu && menuTitle) {

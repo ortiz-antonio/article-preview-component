@@ -4,7 +4,7 @@ module.exports = {
     require('postcss-import'),
     require('tailwindcss'),
     ...(process.env.NODE_ENV === 'production'
-        ? [require("cssnano")({ preset: "default" })]
-        : [])
-  ]
+      ? [require('cssnano')({ preset: 'default' })]
+      : []),
+  ],
 };

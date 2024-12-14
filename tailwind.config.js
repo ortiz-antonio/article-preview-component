@@ -30,8 +30,7 @@ module.exports = {
   safelist: [],
   presets: [],
   theme: {
-    screens: viewport
-    ,
+    screens: viewport,
     colors,
     spacing,
     fontSize,
@@ -39,13 +38,13 @@ module.exports = {
     fontFamily,
     fontWeight,
     viewport,
-    backgroundColor: ({theme}) => theme('colors'),
-    textColor: ({theme}) => theme('colors'),
-    margin: ({theme}) => ({
+    backgroundColor: ({ theme }) => theme('colors'),
+    textColor: ({ theme }) => theme('colors'),
+    margin: ({ theme }) => ({
       auto: 'auto',
-      ...theme('spacing')
+      ...theme('spacing'),
     }),
-    padding: ({theme}) => theme('spacing')
+    padding: ({ theme }) => theme('spacing'),
   },
   variantOrder: [
     'first',
@@ -63,7 +62,7 @@ module.exports = {
     'focus',
     'focus-visible',
     'active',
-    'disabled'
+    'disabled',
   ],
 
   // Disables Tailwind's reset and usage of rgb/opacity
@@ -71,7 +70,7 @@ module.exports = {
     preflight: false,
     textOpacity: false,
     backgroundOpacity: false,
-    borderOpacity: false
+    borderOpacity: false,
   },
 
   // Prevents Tailwind's core components
@@ -79,67 +78,67 @@ module.exports = {
 
   // Prevents Tailwind from generating that wall of empty custom properties
   experimental: {
-    optimizeUniversalDefaults: true
+    optimizeUniversalDefaults: true,
   },
 
   plugins: [
     // Generates custom property values from tailwind config
-    plugin(function ({addComponents, config}) {
+    plugin(function ({ addComponents, config }) {
       let result = '';
 
       const currentConfig = config();
 
       const groups = [
-        {key: 'colors', prefix: 'color'},
-        {key: 'spacing', prefix: 'space'},
-        {key: 'fontSize', prefix: 'size'},
-        {key: 'lineHeight', prefix: 'leading'},
-        {key: 'fontFamily', prefix: 'font'},
-        {key: 'fontWeight', prefix: 'font'},
-        {key: 'viewport', prefix: 'breakpoint'}
+        { key: 'colors', prefix: 'color' },
+        { key: 'spacing', prefix: 'space' },
+        { key: 'fontSize', prefix: 'size' },
+        { key: 'lineHeight', prefix: 'leading' },
+        { key: 'fontFamily', prefix: 'font' },
+        { key: 'fontWeight', prefix: 'font' },
+        { key: 'viewport', prefix: 'breakpoint' },
       ];
 
-      groups.forEach(({key, prefix}) => {
+      groups.forEach(({ key, prefix }) => {
         const group = currentConfig.theme[key];
 
         if (!group) {
           return;
         }
 
-        Object.keys(group).forEach(key => {
+        Object.keys(group).forEach((key) => {
           result += `--${prefix}-${key}: ${group[key]};`;
         });
       });
 
       addComponents({
-        ':root': postcssJs.objectify(postcss.parse(result))
+        ':root': postcssJs.objectify(postcss.parse(result)),
       });
     }),
 
     // Generates custom utility classes
-    plugin(function ({addUtilities, config}) {
+    plugin(function ({ addUtilities, config }) {
       const currentConfig = config();
       const customUtilities = [
-        {key: 'spacing', prefix: 'flow-space', property: '--flow-space'},
-        {key: 'spacing', prefix: 'region-space', property: '--region-space'},
-        {key: 'spacing', prefix: 'gutter', property: '--gutter'}
+        { key: 'spacing', prefix: 'flow-space', property: '--flow-space' },
+        { key: 'spacing', prefix: 'region-space', property: '--region-space' },
+        { key: 'spacing', prefix: 'gutter', property: '--gutter' },
       ];
 
-      customUtilities.forEach(({key, prefix, property}) => {
+      customUtilities.forEach(({ key, prefix, property }) => {
         const group = currentConfig.theme[key];
 
         if (!group) {
           return;
         }
 
-        Object.keys(group).forEach(key => {
+        Object.keys(group).forEach((key) => {
           addUtilities({
             [`.${prefix}-${key}`]: postcssJs.objectify(
-              postcss.parse(`${property}: ${group[key]}`)
-            )
+              postcss.parse(`${property}: ${group[key]}`),
+            ),
           });
         });
       });
-    })
-  ]
+    }),
+  ],
 };

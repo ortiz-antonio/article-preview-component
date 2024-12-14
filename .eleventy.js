@@ -1,4 +1,4 @@
-module.exports = config => {
+module.exports = (config) => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
@@ -12,7 +12,7 @@ module.exports = config => {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'dist'
-    }
+      output: 'dist',
+    },
   };
 };

@@ -2,20 +2,14 @@
   /* Article css code */
 }
 
-.article__footer{
+.article__footer {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
 }
 
-#social-share{
+#social-share {
   gap: var(--space-xs);
   align-items: center;
   list-style: none;
 }
-
-#social-share > li{
-
-}
-
-

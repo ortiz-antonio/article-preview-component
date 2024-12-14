@@ -12,6 +12,6 @@ body {
   line-height: var(--leading-standard);
 }
 
-.article__footer--share{
+.article__footer--share {
   margin-left: auto;
 }
