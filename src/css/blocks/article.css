@@ -1,8 +1,13 @@
 .article {
-  /* Article css code */
+  display: flex;
+  flex-direction:column;
 }
 
-.article__footer {
+.article__content{
+  padding-inline: var(--space-s-l);
+}
+
+.article__footer, article__share {
   display: flex;
   position:relative;
   flex-wrap: wrap;
@@ -11,17 +16,10 @@
 }
 
 .article__share {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-xs);
-  
+  display:flex;
   position: absolute;
   z-index:10;
-  @media screen(md){
-    top:-2em;
-    right:-1.5em;
-  }
+  align-items:center;
 }
 
 #social-share {
@@ -31,3 +29,11 @@
   list-style: none;
 }
 
+@media screen(md){
+
+  .article__share{
+    top:-2em;
+    right:-1.5em;
+  }
+
+}
