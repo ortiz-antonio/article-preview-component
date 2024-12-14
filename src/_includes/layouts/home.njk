@@ -5,31 +5,11 @@
     <h2>{{ title }}</h2>
     <p>{{ summary }}</p>
 
-    <img alt="" src="{{ avatar }}" width="50" height="50" />
-    <h3>{{ author }}</h3>
-    <time datetime="{{ published }}">{{ publishedFormated }}</time>
-
-    <div class="article__share" id="articleShare">
-      <p id="share">SHARE</p>
-      <ul role="menu" aria-labelledby="share" id="social-share">
-        <li role="none">
-          <a role="menuitem" href="#fb">
-            <img alt="facebook" src="./images/icon-facebook.svg" />
-          </a>
-        </li>
-
-        <li role="none">
-          <a role="menuitem" href="#twitter">
-            <img alt="twitter" src="./images/icon-twitter.svg" />
-          </a>
-        </li>
-
-        <li role="none">
-          <a role="menuitem" href="#pinterest">
-            <img alt="pinterest" src="./images/icon-pinterest.svg" />
-          </a>
-        </li>
-      </ul>
+    <div class="article__footer" id="articleFooter">
+      {% include "partials/author.njk" %}
+      {% include "partials/article-share.njk" %}
     </div>
+    
+
   </div>
 {% endblock %}

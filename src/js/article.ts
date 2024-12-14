@@ -1,7 +1,11 @@
 // Get DOM elements with type safety
-const socialShareMenu = document.getElementById('social-share') as HTMLElement | null;
-const articleShare = document.getElementById('articleShare') as HTMLElement | null;
-const menuTitle = document.getElementById('share') as HTMLElement | null;
+const socialShareMenu = document.getElementById(
+  "social-share",
+) as HTMLElement | null;
+const articleFooter = document.getElementById(
+  "articleFooter",
+) as HTMLElement | null;
+const menuTitle = document.getElementById("share") as HTMLElement | null;
 
 let isMenuExpanded = false;
 
@@ -9,7 +13,7 @@ setDisplay();
 
 const buttonShare = `
     <button
-      class="article__share--button"
+      class="article__footer--share"
       aria-label="open share menu"
       aria-expanded="false"
       aria-controls="social-share"
@@ -19,39 +23,37 @@ const buttonShare = `
     </button>
 `;
 
+if (articleFooter) {
+  articleFooter.insertAdjacentHTML("beforeend", buttonShare);
 
-if (articleShare) {
-  articleShare.insertAdjacentHTML('beforeend', buttonShare);
-
-  articleShare.addEventListener('click', function (e: MouseEvent) {
+  articleFooter.addEventListener("click", (e: MouseEvent) => {
     const target = e.target as HTMLElement | null;
-    const button = target?.closest('.article__share--button') as HTMLElement | null;
+    const button = target?.closest(
+      ".article__footer--share",
+    ) as HTMLElement | null;
     if (button) {
       toggleMenu(button);
     }
   });
 }
 
-
 function toggleMenu(button: HTMLElement): void {
   isMenuExpanded = !isMenuExpanded;
 
-  button.setAttribute('aria-expanded', isMenuExpanded.toString());
+  button.setAttribute("aria-expanded", isMenuExpanded.toString());
   setDisplay();
 }
 
-function setDisplay(){
+function setDisplay() {
   let display = "";
-  if(isMenuExpanded){
-    display = "block";
-  }else{
+  if (isMenuExpanded) {
+    display = "flex";
+  } else {
     display = "none";
   }
-  
+
   if (socialShareMenu && menuTitle) {
     socialShareMenu.style.display = display;
     menuTitle.style.display = display;
   }
 }
-
-
