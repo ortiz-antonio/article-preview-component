@@ -22,7 +22,10 @@
     "enabled": true,
     "ignore": ["tailwind.config.js", "src/css-utils"],
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnknownMediaFeatureName": "warn"
+      }
     }
   },
   "javascript": {
