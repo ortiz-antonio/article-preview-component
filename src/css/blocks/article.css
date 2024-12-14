@@ -1,9 +1,16 @@
 .article {
-  display: flex;
-  flex-direction:column;
+  display: grid;
+}
+
+.article__cover {
+  aspect-ratio:1;
+  object-fit:cover;
 }
 
 .article__content{
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:space-evenly;
   padding-inline: var(--space-s-l);
 }
 
@@ -34,6 +41,10 @@
   .article__share{
     top:-2em;
     right:-1.5em;
+  }
+
+  .article{
+    grid-template-columns:1fr 1.5fr;
   }
 
 }
