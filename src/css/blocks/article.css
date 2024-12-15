@@ -2,6 +2,7 @@
   display: grid;
   border-radius: 1rem;
   overflow: hidden;
+  background-color: var(--color-background-card);
 }
 
 .article__cover {
@@ -29,6 +30,10 @@
   position: absolute;
   z-index: 10;
   align-items: center;
+}
+
+.article svg {
+  color: var(--color-background-card);
 }
 
 #social-share {

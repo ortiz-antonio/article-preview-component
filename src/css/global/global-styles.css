@@ -5,8 +5,8 @@
   project: https://cube.fyi/css.html
 */
 body {
-  background: var(--color-light);
-  color: var(--color-dark);
+  background-color: var(--color-background);
+  color: var(--color-base);
   font-size: var(--size-step-0);
   font-family: var(--font-base);
   line-height: var(--leading-standard);
@@ -14,4 +14,9 @@ body {
 
 .article__footer--share {
   margin-left: auto;
+}
+
+h2,
+h3 {
+  color: var(--color-primary);
 }
