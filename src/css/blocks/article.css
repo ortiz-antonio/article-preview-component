@@ -37,7 +37,7 @@ article__share {
   list-style: none;
 }
 
-@media screen and (md) {
+@media screen(md) {
   .article__share {
     top: -2em;
     right: -1.5em;
