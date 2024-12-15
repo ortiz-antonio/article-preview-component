@@ -1,5 +1,7 @@
 .article {
   display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .article__cover {
@@ -14,8 +16,7 @@
   padding-inline: var(--space-s-l);
 }
 
-.article__footer,
-article__share {
+.article__footer {
   display: flex;
   position: relative;
   flex-wrap: wrap;
