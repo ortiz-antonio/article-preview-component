@@ -14,7 +14,11 @@ body {
 
 .article__footer--share {
   margin-left: auto;
-  z-index: 11;
+  border:none;
+  padding:.6rem;
+  background-color: var(--color-background);
+  border-radius:50%;
+  z-index:11;
 }
 
 h2,
