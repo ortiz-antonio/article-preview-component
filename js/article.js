@@ -1,13 +1,12 @@
 "use strict";
 // Get DOM elements with type safety
-const socialShareMenu = document.getElementById('social-share');
-const articleShare = document.getElementById('articleShare');
-const menuTitle = document.getElementById('share');
+const socialShareMenu = document.getElementById('articleShare');
+const articleFooter = document.getElementById('articleFooter');
 let isMenuExpanded = false;
 setDisplay();
 const buttonShare = `
     <button
-      class="article__share--button"
+      class="article__footer--share"
       aria-label="open share menu"
       aria-expanded="false"
       aria-controls="social-share"
@@ -16,11 +15,11 @@ const buttonShare = `
       <img alt="" src="./images/icon-share.svg" width="25" height="25" />
     </button>
 `;
-if (articleShare) {
-    articleShare.insertAdjacentHTML('beforeend', buttonShare);
-    articleShare.addEventListener('click', function (e) {
+if (articleFooter) {
+    articleFooter.insertAdjacentHTML('beforeend', buttonShare);
+    articleFooter.addEventListener('click', (e) => {
         const target = e.target;
-        const button = target?.closest('.article__share--button');
+        const button = target?.closest('.article__footer--share');
         if (button) {
             toggleMenu(button);
         }
@@ -32,15 +31,14 @@ function toggleMenu(button) {
     setDisplay();
 }
 function setDisplay() {
-    let display = "";
+    let display = '';
     if (isMenuExpanded) {
-        display = "block";
+        display = 'flex';
     }
     else {
-        display = "none";
+        display = 'none';
     }
-    if (socialShareMenu && menuTitle) {
+    if (socialShareMenu) {
         socialShareMenu.style.display = display;
-        menuTitle.style.display = display;
     }
 }
