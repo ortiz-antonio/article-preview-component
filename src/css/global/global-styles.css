@@ -18,6 +18,7 @@ body {
   padding:.6rem;
   background-color: var(--color-background);
   border-radius:50%;
+  margin-block:var(--space-3xs);
   z-index:11;
 }
 
