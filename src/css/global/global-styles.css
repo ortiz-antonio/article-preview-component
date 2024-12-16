@@ -5,6 +5,8 @@
   project: https://cube.fyi/css.html
 */
 body {
+  display:grid;
+  place-content:center;
   background-color: var(--color-background);
   color: var(--color-base);
   font-size: var(--size-step-0);
