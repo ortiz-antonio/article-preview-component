@@ -1,7 +1,7 @@
 .article {
   display: grid;
   border-radius: 1rem;
-  overflow: hidden;
+  overflow: visible;
   background-color: var(--color-background-card);
 }
 
@@ -14,7 +14,10 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  padding-inline: var(--space-s-l);
+}
+
+.article__header{
+
 }
 
 .article__footer {
@@ -23,20 +26,26 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-xs);
+  width: 100%;
 }
 
 .article__share {
   display: flex;
   position: absolute;
+  left:0;
   z-index: 10;
   align-items: center;
+  background-color: var(--color-primary);
+  width:100%;
+  padding-inline-start: var(--space-xs-m);
 }
 
 .article svg {
   color: var(--color-background-card);
 }
 
-#social-share {
+.article__share--menu {
+  display:flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
   align-items: center;
@@ -45,8 +54,29 @@
 
 @media screen(md) {
   .article__share {
-    top: -2em;
+    top: -3.5em;
+    left: auto;
     right: -1.5em;
+    width: 16rem;
+    height: 3em;
+
+    /* Tooltip */
+     --b: 2em; /* base */
+  --h: 1em; /* height */
+
+--p: 65%; /* position  */
+--r: 1rem; /* the radius */
+--c: var(--color-primary);
+
+border-radius: var(--r);
+clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%,
+min(100%, var(--p) + var(--b) / 2) 100%,
+var(--p) calc(100% + var(--h)),
+max(0%, var(--p) - var(--b) / 2) 100%);
+background: var(--c);
+border-image: conic-gradient(var(--c) 0 0) fill 0/
+var(--r) calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2)/
+0 0 var(--h) 0;
   }
 
   .article {

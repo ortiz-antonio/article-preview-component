@@ -1,11 +1,10 @@
 // Get DOM elements with type safety
 const socialShareMenu = document.getElementById(
-  'social-share',
+  'articleShare',
 ) as HTMLElement | null;
 const articleFooter = document.getElementById(
   'articleFooter',
 ) as HTMLElement | null;
-const menuTitle = document.getElementById('share') as HTMLElement | null;
 
 let isMenuExpanded = false;
 
@@ -52,8 +51,7 @@ function setDisplay() {
     display = 'none';
   }
 
-  if (socialShareMenu && menuTitle) {
+  if (socialShareMenu) {
     socialShareMenu.style.display = display;
-    menuTitle.style.display = display;
   }
 }
