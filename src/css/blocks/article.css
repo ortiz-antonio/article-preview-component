@@ -1,6 +1,6 @@
-#share{
-  font-size:var(--size-step-1);
-  color:var(--color-background-card);
+#share {
+  font-size: var(--size-step-1);
+  color: var(--color-background-card);
 }
 
 .article {
@@ -53,7 +53,6 @@
   flex-wrap: wrap;
   gap: var(--space-xs);
   list-style: none;
-  
 }
 
 @media screen and (min-width: 47.5rem) {
