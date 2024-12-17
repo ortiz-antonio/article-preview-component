@@ -22,8 +22,8 @@ body {
   border-radius: 50%;
   margin-block: var(--space-3xs);
   z-index: 11;
-  box-shadow: .5rem .5rem 1rem -.5rem rgba(0,0,0,0.5);
-  &:focus-visible{
+  box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
+  &:focus-visible {
     outline: 2px solid var(--color-primary);
   }
 }
