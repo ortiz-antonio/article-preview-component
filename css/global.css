@@ -91,7 +91,7 @@ textarea:not([rows]) {
   font-weight: 700;
   src: url("../fonts/manrope-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-:root{
+:root {
   --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
   --color-desaturated-dark-blue: hsl(214, 17%, 51%);
   --color-grayish-blue: hsl(212, 23%, 69%);
@@ -127,13 +127,17 @@ textarea:not([rows]) {
   --leading-fine: 1.15;
   --leading-standard: 1.5;
   --leading-loose: 1.7;
-  --font-base: Manrope,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  --font-base: Manrope, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 700;
   --breakpoint-sm: 20.625rem;
   --breakpoint-md: 47.5rem;
   --breakpoint-lg: 75rem;
+}
+#share {
+  font-size: var(--size-step-1);
+  color: var(--color-background-card);
 }
 .article {
   display: grid;
@@ -164,12 +168,11 @@ textarea:not([rows]) {
   left: 0;
   z-index: 10;
   align-items: center;
-  justify-content:start;
   background-color: var(--color-primary);
   padding-inline-start: var(--space-xs-m);
   border-radius: 0 0 1rem 1rem;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 .article svg {
   color: var(--color-background-card);
@@ -180,27 +183,26 @@ textarea:not([rows]) {
   gap: var(--space-xs);
   list-style: none;
 }
-@media (min-width: 47.5rem) {
-  .article__cover{
+@media screen and (min-width: 47.5rem) {
+  .article__cover {
     border-radius: 1rem 0 0 1rem;
   }
-  
+
   .article__share {
     top: -3.5em;
     left: auto;
     right: -1.5em;
-    width: 16rem;
+    width: 14rem;
     height: 3em;
 
-    
     /* Tooltip */
     --b: 2em; /* base */
     --h: 1em; /* height */
-    
-    --p: 67%; /* position  */
+
+    --p: 60%; /* position  */
     --r: 1rem; /* the radius */
     --c: var(--color-primary);
-    
+
     border-radius: var(--r);
     background: var(--c);
     clip-path: polygon(
@@ -213,8 +215,8 @@ textarea:not([rows]) {
       max(0%, var(--p) - var(--b) / 2) 100%
     );
     border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
-    calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
-    var(--h) 0;
+      calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
+      var(--h) 0;
   }
 
   .article {
@@ -382,8 +384,8 @@ Info: https://piccalil.li/quick-tip/visually-hidden/
   project: https://cube.fyi/css.html
 */
 body {
-  display:grid;
-  place-content:center;
+  display: grid;
+  place-content: center;
   background-color: var(--color-background);
   color: var(--color-base);
   font-size: var(--size-step-0);
@@ -392,17 +394,17 @@ body {
 }
 .article__footer--share {
   margin-left: auto;
-  border:none;
-  padding:.6rem;
+  border: none;
+  padding: .6rem;
   background-color: var(--color-background);
-  border-radius:50%;
-  margin-block:var(--space-3xs);
-  z-index:11;
+  border-radius: 50%;
+  margin-block: var(--space-3xs);
+  z-index: 11;
 }
 h2,
 h3 {
   color: var(--color-primary);
 }
-.block{
+.block {
   display: block;
 }
