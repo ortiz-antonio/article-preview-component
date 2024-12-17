@@ -1,3 +1,8 @@
+#share{
+  font-size:var(--size-step-1);
+  color:var(--color-background-card);
+}
+
 .article {
   display: grid;
   border-radius: 1rem;
@@ -31,13 +36,12 @@
   left: 0;
   z-index: 10;
   align-items: center;
-  justify-content:start;
   background-color: var(--color-primary);
   width: 100%;
   padding-inline-start: var(--space-xs-m);
   border-radius: 0 0 1rem 1rem;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .article svg {
@@ -49,29 +53,29 @@
   flex-wrap: wrap;
   gap: var(--space-xs);
   list-style: none;
+  
 }
 
-@media screen(md) {
-  .article__cover{
+@media screen and (min-width: 47.5rem) {
+  .article__cover {
     border-radius: 1rem 0 0 1rem;
   }
-  
+
   .article__share {
     top: -3.5em;
     left: auto;
     right: -1.5em;
-    width: 16rem;
+    width: 14rem;
     height: 3em;
 
-    
     /* Tooltip */
     --b: 2em; /* base */
     --h: 1em; /* height */
-    
-    --p: 67%; /* position  */
+
+    --p: 60%; /* position  */
     --r: 1rem; /* the radius */
     --c: var(--color-primary);
-    
+
     border-radius: var(--r);
     background: var(--c);
     clip-path: polygon(
@@ -84,8 +88,8 @@
       max(0%, var(--p) - var(--b) / 2) 100%
     );
     border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
-    calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
-    var(--h) 0;
+      calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
+      var(--h) 0;
   }
 
   .article {
