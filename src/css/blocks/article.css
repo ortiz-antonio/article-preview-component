@@ -56,6 +56,10 @@
   list-style: none;
 }
 
+.testimonial__author--img{
+  border-radius:50%;
+}
+
 @media screen and (min-width: 47.5rem) {
   .article__cover {
     border-radius: 1rem 0 0 1rem;
