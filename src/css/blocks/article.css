@@ -14,10 +14,6 @@
   border-radius: 1rem 1rem 0 0;
 }
 
-.article__content {
-
-}
-
 .article__footer {
   display: flex;
   position: relative;
@@ -52,11 +48,11 @@
   list-style: none;
 }
 
-.testimonial__author--img{
-  border-radius:50%;
+.testimonial__author--img {
+  border-radius: 50%;
 }
 
-@media screen and (min-width: 47.5rem) {
+@screen sm {
   .article__cover {
     border-radius: 1rem 0 0 1rem;
   }

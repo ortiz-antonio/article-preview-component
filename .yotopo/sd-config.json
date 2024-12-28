@@ -1,7 +1,5 @@
 {
-  "source": [
-    ".yotopo/build/tokens/**/*.json"
-  ],
+  "source": [".yotopo/build/tokens/**/*.json"],
   "platforms": {
     "js": {
       "transformGroup": "js",
