@@ -1,0 +1,15 @@
+[project]
+template = "fem-cube-eleventy"
+title = "Article Preview Component"
+name = "article-preview-component"
+description = "Article preview component solution"
+directory = "/home/ortiz/dev/frontend-mentor/article-preview-component"
+
+[project.author]
+name = "Antonio Ortiz"
+username = "ortiz-antonio"
+url = "https://ortiz.studio"
+
+[project.links]
+repository = "git@github.com:ortiz-antonio/article-preview-component.git"
+homepage = "https://ortiz-antonio.github.io/article-preview-component"

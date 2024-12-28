@@ -1,0 +1,15 @@
+
+[fontWeight]
+regular = "400"
+medium = "600"
+bold = "800"
+
+[lineHeight]
+flat = 1
+fine = 1.15
+standart = 1.5
+loose = 1.7
+
+[fontFamily]
+base = "Manrope, Roboto, Arial, sans-serif"
+

@@ -1,0 +1,20 @@
+{
+  "source": [
+    ".yotopo/build/tokens/**/*.json"
+  ],
+  "platforms": {
+    "js": {
+      "transformGroup": "js",
+      "files": [
+        {
+          "format": "javascript/esm",
+          "destination": "./theme.js",
+          "options": {
+            "minify": true,
+            "outputReferences": true
+          }
+        }
+      ]
+    }
+  }
+}

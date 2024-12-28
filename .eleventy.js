@@ -1,11 +1,8 @@
 module.exports = (config) => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
+  config.setWatchThrottleWaitTime(3000); 
 
-  // config.addFilter('md', require('./src/filters/md.js'))
-  config.addWatchTarget('./src/css/**/*.css');
-  config.addWatchTarget('./src/js/**/*.js');
-  config.setWatchThrottleWaitTime(300);
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
