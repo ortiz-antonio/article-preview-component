@@ -12,14 +12,4 @@ export default defineConfig({
   ],
 
   theme: theme,
-  // preflights: [
-  // {
-  //   getCSS: ({ theme }) => {
-  //     const cssVars = Object.entries(theme.colors || {})
-  //       .map(([key, value]) => `--color-${key}: ${value};`)
-  //       .join('\n');
-  //     return `:root {\n${cssVars}\n}`;
-  //   },
-  // },
-  //   ]
 });

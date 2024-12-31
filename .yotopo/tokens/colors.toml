@@ -1,4 +1,5 @@
 [colors]
+type = "color"
 very-dark-grayish-blue = "hsl(217, 19%, 35%)"
 desaturated-dark-blue = "#677693"
 grayish-blue = "hsl(212, 23%, 69%)"
@@ -7,4 +8,4 @@ primary = "{colors.very-dark-grayish-blue}"
 base = "{colors.desaturated-dark-blue}"
 base-low = "{colors.grayish-blue}"
 background = "{colors.light-grayish-blue}"
-background-card = "black"
+background-card = "white"
