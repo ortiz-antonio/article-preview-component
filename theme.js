@@ -4,15 +4,10 @@
 
 export default {
   colors: {
-    "very-dark-grayish-blue":
-      "var(--color-very-dark-grayish-blue, hsl(217, 19%, 35%))",
-    "desaturated-dark-blue": "var(--color-desaturated-dark-blue, #677693)",
-    "grayish-blue": "var(--color-grayish-blue, hsl(212, 23%, 69%))",
-    "light-grayish-blue": "var(--color-light-grayish-blue, hsl(210, 46%, 95%))",
-    primary: "var(--color-very-dark-grayish-blue, hsl(217, 19%, 35%))",
-    base: "var(--color-desaturated-dark-blue, #677693)",
-    "base-low": "var(--color-grayish-blue, hsl(212, 23%, 69%))",
-    background: "var(--color-light-grayish-blue, hsl(210, 46%, 95%))",
+    primary: "var(--color-primary, hsl(217, 19%, 35%))",
+    base: "var(--color-base, #677693)",
+    "base-low": "var(--color-base-low, hsl(212, 23%, 69%))",
+    background: "var(--color-background, hsl(210, 46%, 95%))",
     "background-card": "var(--color-background-card, white)",
   },
   fontSize: {
