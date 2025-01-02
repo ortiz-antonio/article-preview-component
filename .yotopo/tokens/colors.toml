@@ -1,12 +1,14 @@
 [colors]
 type = "color"
-#very-dark-grayish-blue = "hsl(217, 19%, 35%)"
-#desaturated-dark-blue = "#677693"
-#grayish-blue = "hsl(212, 23%, 69%)"
-#light-grayish-blue = "hsl(210, 46%, 95%)"
 
-primary = "hsl(217, 19%, 35%)"
-base = "#677693"
-base-low = "hsl(212, 23%, 69%)"
-background = "hsl(210, 46%, 95%)"
-background-card = "white"
+# Very Dark Grayish Blue: hsl(217, 19%, 35%)
+# Desaturated Dark Blue: hsl(214, 17%, 51%)
+# Grayish Blue: hsl(212, 23%, 69%)
+# Light Grayish Blue: hsl(210, 46%, 95%)
+
+primary = "hsl(214, 17%, 51%)"
+accent = "#fff"
+base = "hsl(212, 23%, 69%)"
+base-light = "hsl(210, 46%, 95%)"
+base-dark = "hsl(217, 19%, 35%)"
+

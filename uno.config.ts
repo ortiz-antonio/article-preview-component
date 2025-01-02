@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetMini } from 'unocss';
+import { defineConfig, presetUno } from 'unocss';
 
 import theme from './theme';
 
@@ -6,10 +6,6 @@ export default defineConfig({
   content: {
     filesystem: ['**/*.{js,ts,jsx,tsx,njk}'],
   },
-  presets: [
-    presetMini({ preflight: false }),
-    presetAttributify({ preflight: false }),
-  ],
-
   theme: theme,
+  presets: [presetUno({ preflight: false })],
 });
