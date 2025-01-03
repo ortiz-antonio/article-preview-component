@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import screenTokens from '../build/tokens/screens.json' with { type: 'json' };
+import token from '../build/tokens/breakpoints.json' with { type: 'json' };
 
 export const spaceConfig = {
-  minWidth: Number.parseInt(screenTokens.screens.sm.$value),
-  maxWidth: Number.parseInt(screenTokens.screens.lg.$value),
+  minWidth: Number.parseInt(token.breakpoints.sm.$value),
+  maxWidth: Number.parseInt(token.breakpoints.lg.$value),
   minSize: 18,
   maxSize: 22,
   positiveSteps: [1, 2, 3, 4, 6, 7],

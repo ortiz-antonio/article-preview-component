@@ -1,20 +1,7 @@
 .attribution {
-  text-align: center;
-  text-wrap: balance;
-  color: var(--color-primary);
+  @apply color-base text-center text-balance;
 }
 
 .attribution__link {
-  color: var(--color-primary);
-
-  &:hover {
-    color: var(--color-primary);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
-    padding: 2px;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
+  @apply color-base hover:color-primary focus:p-1 focus:no-underline focus:outline-primary focus:color-primary;
 }

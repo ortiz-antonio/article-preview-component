@@ -5,30 +5,17 @@
   project: https://cube.fyi/css.html
 */
 body {
-  display: grid;
-  place-content: center;
-  background-color: var(--color-background);
-  color: var(--color-base);
-  font-size: var(--size-step-0);
-  font-family: var(--font-base);
-  line-height: var(--leading-standard);
+  @apply grid place-content-center bg-base-light color-base font-base text-step-0 leading-standart;
 }
 
 .article__footer--share {
-  margin-left: auto;
-  border: none;
-  padding: .6rem;
-  background-color: var(--color-background);
-  border-radius: 50%;
-  margin-block: var(--space-3xs);
-  z-index: 11;
-  box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
-  }
+  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline focus:color-primary z-[11] p-2;
 }
 
-h2,
+h2{
+  @apply color-primary text-step-2 text-wrap leading-standart;
+}
+
 h3 {
-  color: var(--color-primary);
+  @apply color-primary text-step-1;
 }

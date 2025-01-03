@@ -6,9 +6,9 @@ type = "color"
 # Grayish Blue: hsl(212, 23%, 69%)
 # Light Grayish Blue: hsl(210, 46%, 95%)
 
-primary = "hsl(214, 17%, 51%)"
+base = "hsl(214, 17%, 51%)"
+secondary = "hsl(212, 23%, 69%)"	
 accent = "#fff"
-base = "hsl(212, 23%, 69%)"
 base-light = "hsl(210, 46%, 95%)"
-base-dark = "hsl(217, 19%, 35%)"
+primary = "hsl(217, 19%, 35%)"
 

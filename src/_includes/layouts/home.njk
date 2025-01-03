@@ -5,14 +5,15 @@
     <img alt="{{ coverImgAlt }}" src="{{ coverImg }}" class="article__cover"/>
 
     <div class="article__content">
-      <div class="article__header wrapper">
-        <h2 class="color-primary">{{ title }}</h2>
+      <div class="article__header">
+        <h2>{{ title }}</h2>
+        
         <p>{{ summary }}</p>
       </div>
     
-      <div class="article__footer wrapper" id="articleFooter">
+      <div class="article__footer" id="articleFooter">
         {% include "partials/author.njk" %}
-        {% include "partials/article-share.njk" %}
+        <!-- Button is inserted here -->
       </div>
     </div>    
   </div>
