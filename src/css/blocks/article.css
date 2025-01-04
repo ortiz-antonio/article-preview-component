@@ -2,8 +2,9 @@
   @apply grid rounded-2xl bg-accent drop-shadow-md overflow-hidden;
 }
 
+
 .article__content {
-  @apply pa-m;
+  @apply pa-m self-center;
 }
 
 .article__share {
@@ -18,7 +19,7 @@
   @apply bg-primary;
 }
 
-@screen lg {
+@screen md {
   .article__cover {
     border-radius: 1rem 0 0 1rem;
   }
@@ -54,6 +55,6 @@
   }
 
   .article {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.6fr;
   }
 }

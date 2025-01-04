@@ -28,11 +28,10 @@
     {% endif %}
   </head>
   <body>
-    <div class="container">
+    <div class="w-full max-w-screen-lg">
       <main>
         <h1 class="visually-hidden">Frontend Mentor Blog</h1>
         {% block content %}{% endblock %}
-        {% include "partials/article-share.njk" %}
       </main>
       <footer>
         <p class="attribution">

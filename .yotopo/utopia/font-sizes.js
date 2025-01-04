@@ -7,8 +7,8 @@ export const fontConfig = {
   maxWidth: Number.parseInt(token.breakpoints.lg.$value),
   minFontSize: 16,
   maxFontSize: 17,
-  minTypeScale: 1.175,
-  maxTypeScale: 1.25,
+  minTypeScale: 1.067,
+  maxTypeScale: 1.125,
   positiveSteps: 3,
   negativeSteps: 0,
 };

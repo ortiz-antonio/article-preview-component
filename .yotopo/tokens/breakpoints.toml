@@ -1,6 +1,6 @@
 
 [breakpoints]
 type = "dimensions"
-sm = '640px'
-#md = '768px'
-lg= '1024px'
+sm = '550px'
+md = '600px'
+lg= '800px'
