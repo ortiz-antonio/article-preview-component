@@ -19,7 +19,7 @@
   @apply bg-primary;
 }
 
-@screen md {
+@screen sm {
   .article__cover {
     border-radius: 1rem 0 0 1rem;
   }
