@@ -15,11 +15,11 @@
 }
 
 .article__share {
-  @apply flex absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl;
+  @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl;
 }
 
 .article__share--menu {
-  @apply flex flex-wrap gap-2xs list-none;
+  @apply inline-flex flex-wrap gap-2xs list-none pl-m;
 }
 
 .article__footer {
@@ -32,16 +32,16 @@
   }
 
   .article__share {
-    top: -3.5em;
+    top: -2.5em;
     left: auto;
-    right: -1.5em;
-    width: 14rem;
+    right: -3.3em;
+    width: 12.5rem;
     height: 3em;
 
     /* Tooltip */
     --b: 2em; /* base */
     --h: 1em; /* height */
-    --p: 60%; /* position */
+    --p: 50%; /* position */
     --r: 1rem; /* the radius */
     --c: var(--color-primary);
 
