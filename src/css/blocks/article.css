@@ -1,5 +1,5 @@
 .article {
-  @apply grid rounded-2xl bg-accent drop-shadow-md;
+  @apply grid rounded-2xl bg-accent shadow-lg shadow-primary;
 }
 
 .article__cover {
@@ -23,7 +23,7 @@
 }
 
 .article__footer {
-  @apply inline-flex pa-m justify-between items-center w-full relative flex-wrap;
+  @apply inline-flex px-m justify-between items-center w-full relative flex-wrap;
 }
 
 @screen sm {
@@ -32,7 +32,7 @@
   }
 
   .article__share {
-    top: -2.5em;
+    top: -3em;
     left: auto;
     right: -3.3em;
     width: 12.5rem;
