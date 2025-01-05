@@ -2,8 +2,9 @@
   @apply grid rounded-2xl bg-accent drop-shadow-md overflow-hidden;
 }
 
-.article__content {
-  @apply pa-m self-center;
+
+.article__header{
+  @apply  self-center px-m;
 }
 
 .article svg {
@@ -11,14 +12,11 @@
 }
 
 .article__share {
-  @apply flex absolute z-[10] border-primary w-full bg-primary h-full;
+  @apply flex absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent;
 }
 
 .article__share--menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  list-style: none;
+  @apply flex flex-wrap gap-2xs list-none;
 }
 
 .article__footer {

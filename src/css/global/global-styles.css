@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-  @apply color-primary text-step-2 text-wrap leading-standart mt-0;
+  @apply color-primary text-step-2 text-wrap leading-standart;
 }
 
 h3 {

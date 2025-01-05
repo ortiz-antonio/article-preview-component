@@ -1,4 +1,5 @@
 :root {
+  --color-primary: hsl(217, 19%, 35%);
   /* 
      --fontSize-step-0: .9rem;
      --fontSize-step-1: 1.1rem;
