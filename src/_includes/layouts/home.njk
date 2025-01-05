@@ -4,19 +4,22 @@
     
     <img alt="{{ coverImgAlt }}" src="{{ coverImg }}" class="h-full"/>
 
-    <div class="article__content">
+    <div class="article__content flow">
+      
       <div class="article__header">
         <h2>{{ title }}</h2>
         
         <p>{{ summary }}</p>
       </div>
-    
-      <div class="article__footer" id="articleFooter">
+      
+    </div>
+
+          <div class="article__footer" id="articleFooter">
         {% include "partials/author.njk" %}
         {% include "partials/article-share.njk" %}
         <!-- Button is inserted here -->
-      </div>
-    </div>    
+          </div>
+          
   </div>
 
 {% endblock %}

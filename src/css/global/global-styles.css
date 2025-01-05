@@ -12,7 +12,7 @@ body {
   @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline focus:color-primary z-[11] p-2;
 }
 
-h2{
+h2 {
   @apply color-primary text-step-2 text-wrap leading-standart mt-0;
 }
 

@@ -2,21 +2,27 @@
   @apply grid rounded-2xl bg-accent drop-shadow-md overflow-hidden;
 }
 
-
 .article__content {
   @apply pa-m self-center;
 }
 
+.article svg {
+  color: var(--color-accent);
+}
+
 .article__share {
-  @appply text-step-2 bg-primary ps-xs-m;
+  @apply flex absolute z-[10] border-primary w-full bg-primary h-full;
+}
+
+.article__share--menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
 }
 
 .article__footer {
-  @apply flex inline-flex justify-between items-center w-full;
-}
-
-.article__share{
-  @apply bg-primary;
+  @apply inline-flex pa-m justify-between items-center w-full relative flex-wrap;
 }
 
 @screen sm {
