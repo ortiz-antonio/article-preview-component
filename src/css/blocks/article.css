@@ -1,7 +1,10 @@
 .article {
-  @apply grid rounded-2xl bg-accent drop-shadow-md overflow-hidden;
+  @apply grid rounded-2xl bg-accent drop-shadow-md;
 }
 
+.article__cover {
+  @apply rounded-t-2xl h-full;
+}
 
 .article__header{
   @apply  self-center px-m;
@@ -12,7 +15,7 @@
 }
 
 .article__share {
-  @apply flex absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent;
+  @apply flex absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl;
 }
 
 .article__share--menu {
@@ -25,7 +28,7 @@
 
 @screen sm {
   .article__cover {
-    border-radius: 1rem 0 0 1rem;
+    @apply rounded-none rounded-l-2xl;
   }
 
   .article__share {
