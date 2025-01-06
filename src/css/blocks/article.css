@@ -1,5 +1,7 @@
 .article {
   @apply grid rounded-2xl bg-accent shadow-primary shadow-lg;
+  box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
+
 }
 
 .article__cover {
@@ -15,7 +17,12 @@
 }
 
 .article__share {
-  @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl;
+  /*   @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl; */
+  @apply inline-flex items-center h-full relative border-none mr-0;
+}
+
+.article__share h3 {
+  margin-top: 0;
 }
 
 .article__share--menu {
@@ -23,7 +30,7 @@
 }
 
 .article__footer {
-  @apply inline-flex px-m justify-between items-center w-full relative flex-wrap;
+  @apply inline-flex px-m items-center w-full relative flex-wrap;
 }
 
 @screen sm {
@@ -31,35 +38,37 @@
     @apply rounded-none rounded-l-2xl;
   }
 
+  /*
   .article__share {
-    top: -4em;
-    left: auto;
-    right: -3.3em;
-    width: 12.5rem;
-    height: 3em;
+     top: -4em;
+     left: auto;
+     right: -3.3em;
+     width: 12.5rem;
+     height: 3em;
 
-    /* Tooltip */
-    --b: 2em; /* base */
-    --h: 1em; /* height */
-    --p: 50%; /* position */
-    --r: 1rem; /* the radius */
-    --c: var(--color-primary);
 
-    border-radius: var(--r);
-    background: var(--c);
-    clip-path: polygon(
-      0 100%,
-      0 0,
-      100% 0,
-      100% 100%,
-      min(100%, var(--p) + var(--b) / 2) 100%,
-      var(--p) calc(100% + var(--h)),
-      max(0%, var(--p) - var(--b) / 2) 100%
-    );
-    border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
-      calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
-      var(--h) 0;
-  }
+  --b: 2em;
+  --h: 1em;
+  --p: 50%;
+  --r: 1rem;
+  --c: var(--color-primary);
+
+  border-radius: var(--r);
+  background: var(--c);
+  clip-path: polygon(
+    0 100%,
+    0 0,
+    100% 0,
+    100% 100%,
+    min(100%, var(--p) + var(--b) / 2) 100%,
+    var(--p) calc(100% + var(--h)),
+    max(0%, var(--p) - var(--b) / 2) 100%
+  );
+  border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
+  calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
+  var(--h) 0;
+     }
+   */
 
   .article {
     grid-template-columns: 1fr 1.6fr;
