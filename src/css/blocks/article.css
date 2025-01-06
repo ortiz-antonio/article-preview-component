@@ -6,8 +6,8 @@
   @apply rounded-t-2xl h-full;
 }
 
-.article__header{
-  @apply  self-center px-m;
+.article__header {
+  @apply self-center px-m;
 }
 
 .article svg {
