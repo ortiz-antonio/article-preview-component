@@ -1,5 +1,5 @@
 .article {
-  @apply grid rounded-2xl bg-accent shadow-lg shadow-primary;
+  @apply grid rounded-2xl bg-accent shadow-primary shadow-lg;
 }
 
 .article__cover {
