@@ -6,7 +6,7 @@ const articleFooter = document.getElementById(
   'articleFooter',
 ) as HTMLElement | null;
 
-let isMenuExpanded = false;
+let isMenuExpanded = true;
 
 setDisplay();
 
