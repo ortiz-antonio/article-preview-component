@@ -3,5 +3,5 @@
 }
 
 .attribution__link {
-  @apply color-base hover:color-primary focus:p-1 focus:no-underline focus:outline-primary focus:color-primary;
+  @apply color-base hover:color-primary hover:no-underline focus:p-1 focus:no-underline focus:outline-primary focus:color-primary;
 }

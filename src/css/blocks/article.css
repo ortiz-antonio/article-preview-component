@@ -1,7 +1,6 @@
 .article {
   @apply grid rounded-2xl bg-accent shadow-primary shadow-lg;
   box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
-
 }
 
 .article__cover {
@@ -12,8 +11,8 @@
   @apply self-center px-m;
 }
 
-.article svg {
-  color: var(--color-accent);
+.article__share svg {
+  @apply color-primary hover:color-base;
 }
 
 .article__share {
@@ -26,7 +25,11 @@
 }
 
 .article__share--menu {
-  @apply inline-flex flex-wrap gap-2xs list-none pl-m;
+  @apply inline-flex gap-3xs list-none items-center;
+}
+
+.article__share--menu a {
+  @apply p-1.5  focus:outline-primary hover:border-b-solid hover:border-base;
 }
 
 .article__footer {

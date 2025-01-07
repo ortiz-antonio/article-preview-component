@@ -13,7 +13,7 @@ setDisplay();
 const buttonShare = `
     <button
       class="article__footer--share"
-      aria-label="open share menu"
+      aria-label="Share menu"
       aria-expanded="false"
       aria-controls="social-share"
       aria-haspopup="true"
