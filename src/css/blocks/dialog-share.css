@@ -1,0 +1,55 @@
+.dialog__share svg {
+  @apply color-primary hover:color-base;
+}
+
+.dialog__share {
+  /*   @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl; */
+  @apply inline-flex items-center h-full relative border-none mr-0;
+}
+
+.dialog__share h3 {
+  margin-top: 0;
+}
+
+.dialog__share--menu {
+  @apply inline-flex gap-3xs list-none items-center;
+}
+
+.dialog__share--menu a {
+  @apply p-1.5  focus:outline-primary hover:border-b-solid hover:border-b-2 hover:border-base;
+}
+
+@screen sm{
+  /*
+  .dialog__share {
+     top: -4em;
+     left: auto;
+     right: -3.3em;
+     width: 12.5rem;
+     height: 3em;
+
+
+  --b: 2em;
+  --h: 1em;
+  --p: 50%;
+  --r: 1rem;
+  --c: var(--color-primary);
+
+  border-radius: var(--r);
+  background: var(--c);
+  clip-path: polygon(
+    0 100%,
+    0 0,
+    100% 0,
+    100% 100%,
+    min(100%, var(--p) + var(--b) / 2) 100%,
+    var(--p) calc(100% + var(--h)),
+    max(0%, var(--p) - var(--b) / 2) 100%
+  );
+  border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
+  calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
+  var(--h) 0;
+     }
+   */
+
+}

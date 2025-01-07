@@ -1,6 +1,6 @@
 // Get DOM elements with type safety
 const socialShareMenu = document.getElementById(
-  'articleShare',
+  'dialogShare',
 ) as HTMLElement | null;
 const articleFooter = document.getElementById(
   'articleFooter',

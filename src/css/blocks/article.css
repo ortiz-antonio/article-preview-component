@@ -1,79 +1,18 @@
 .article {
-  @apply grid rounded-2xl bg-accent shadow-primary shadow-lg;
+  @apply grid rounded-2xl bg-accent shadow-primary shadow-lg sm:grid-cols-[1fr_1.6fr];
   box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
 }
 
 .article__cover {
-  @apply rounded-t-2xl h-full;
+  @apply rounded-t-2xl h-full sm:rounded-none sm:rounded-l-2xl;
 }
 
 .article__header {
   @apply self-center px-m;
 }
 
-.article__share svg {
-  @apply color-primary hover:color-base;
-}
-
-.article__share {
-  /*   @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl; */
-  @apply inline-flex items-center h-full relative border-none mr-0;
-}
-
-.article__share h3 {
-  margin-top: 0;
-}
-
-.article__share--menu {
-  @apply inline-flex gap-3xs list-none items-center;
-}
-
-.article__share--menu a {
-  @apply p-1.5  focus:outline-primary hover:border-b-solid hover:border-base;
-}
 
 .article__footer {
   @apply inline-flex px-m items-center w-full relative flex-wrap;
 }
 
-@screen sm {
-  .article__cover {
-    @apply rounded-none rounded-l-2xl;
-  }
-
-  /*
-  .article__share {
-     top: -4em;
-     left: auto;
-     right: -3.3em;
-     width: 12.5rem;
-     height: 3em;
-
-
-  --b: 2em;
-  --h: 1em;
-  --p: 50%;
-  --r: 1rem;
-  --c: var(--color-primary);
-
-  border-radius: var(--r);
-  background: var(--c);
-  clip-path: polygon(
-    0 100%,
-    0 0,
-    100% 0,
-    100% 100%,
-    min(100%, var(--p) + var(--b) / 2) 100%,
-    var(--p) calc(100% + var(--h)),
-    max(0%, var(--p) - var(--b) / 2) 100%
-  );
-  border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
-  calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
-  var(--h) 0;
-     }
-   */
-
-  .article {
-    grid-template-columns: 1fr 1.6fr;
-  }
-}
