@@ -17,5 +17,5 @@ h2 {
 }
 
 h3 {
-  @apply color-primary text-step-1;
+  @apply mt-0 text-step-1;
 }

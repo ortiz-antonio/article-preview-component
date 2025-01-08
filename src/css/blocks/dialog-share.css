@@ -1,18 +1,15 @@
-.dialog__share svg {
-  @apply color-primary hover:color-base;
+.dialog__share {
+  @apply h-full relative border-none mr-0 color-primary;
 }
 
-.dialog__share {
-  @apply h-full relative border-none mr-0;
+.dialog__share-js {
+  @apply border-primary border-b-l w-full h-full bg-primary self-center color-accent rounded-b-2xl;
 }
 
 .dialog__share--wrapper {
   @apply inline-flex items-center;
 }
 
-.dialog__share h3 {
-  margin-top: 0;
-}
 
 .dialog__share--menu {
   @apply inline-flex gap-3xs list-none items-center;

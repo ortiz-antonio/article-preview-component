@@ -4,7 +4,7 @@ const articleFooter = document.getElementById(
   'articleFooter',
 ) as HTMLElement | null;
 
-let isDialogOpen = true;
+let isDialogOpen = false;
 
 setDisplay();
 setDialogShareStyles();
@@ -50,7 +50,7 @@ function setDisplay() {
   }
 }
 
-function setDialogShareStyles(){
+function setDialogShareStyles() {
   dialogShare.classList.remove('dialog__share');
-  dialogShare.classList.add('dialog__share--js');
+  dialogShare.classList.add('dialog__share-js');
 }
