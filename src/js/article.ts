@@ -1,12 +1,10 @@
 // Get DOM elements with type safety
-const socialShareMenu = document.getElementById(
-  'dialogShare',
-) as HTMLElement | null;
+const dialogShare = document.getElementById('dialogShare') as HTMLDialogElement;
 const articleFooter = document.getElementById(
   'articleFooter',
 ) as HTMLElement | null;
 
-let isMenuExpanded = true;
+let isDialogOpen = true;
 
 setDisplay();
 
@@ -37,21 +35,16 @@ if (articleFooter) {
 }
 
 function toggleMenu(button: HTMLElement): void {
-  isMenuExpanded = !isMenuExpanded;
+  isDialogOpen = !isDialogOpen;
 
-  button.setAttribute('aria-expanded', isMenuExpanded.toString());
+  button.setAttribute('aria-expanded', isDialogOpen.toString());
   setDisplay();
 }
 
 function setDisplay() {
-  let display = '';
-  if (isMenuExpanded) {
-    display = 'flex';
+  if (isDialogOpen) {
+    dialogShare.show();
   } else {
-    display = 'none';
-  }
-
-  if (socialShareMenu) {
-    socialShareMenu.style.display = display;
+    dialogShare.close();
   }
 }

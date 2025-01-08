@@ -4,7 +4,11 @@
 
 .dialog__share {
   /*   @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl; */
-  @apply inline-flex items-center h-full relative border-none mr-0;
+  @apply h-full relative border-none mr-0;
+}
+
+.dialog__share--wrapper {
+  @apply inline-flex items-center;
 }
 
 .dialog__share h3 {
@@ -19,7 +23,7 @@
   @apply p-1.5  focus:outline-primary hover:border-b-solid hover:border-b-2 hover:border-base;
 }
 
-@screen sm{
+@screen sm {
   /*
   .dialog__share {
      top: -4em;
@@ -51,5 +55,4 @@
   var(--h) 0;
      }
    */
-
 }
