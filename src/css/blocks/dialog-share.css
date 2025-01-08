@@ -3,7 +3,6 @@
 }
 
 .dialog__share {
-  /*   @apply absolute z-[10] border-primary w-full bg-primary h-full items-center color-accent rounded-b-2xl; */
   @apply h-full relative border-none mr-0;
 }
 

@@ -9,7 +9,7 @@ body {
 }
 
 .article__footer--share {
-  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline focus:color-primary z-[11] p-2;
+  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline focus:color-primary z-[11] p-3 my-m;
 }
 
 h2 {

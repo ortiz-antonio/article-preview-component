@@ -7,6 +7,7 @@ const articleFooter = document.getElementById(
 let isDialogOpen = true;
 
 setDisplay();
+setDialogShareStyles();
 
 const buttonShare = `
     <button
@@ -47,4 +48,9 @@ function setDisplay() {
   } else {
     dialogShare.close();
   }
+}
+
+function setDialogShareStyles(){
+  dialogShare.classList.remove('dialog__share');
+  dialogShare.classList.add('dialog__share--js');
 }
