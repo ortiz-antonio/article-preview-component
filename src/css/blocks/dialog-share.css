@@ -12,7 +12,7 @@
 
 
 .dialog__share--menu {
-  @apply inline-flex gap-3xs list-none items-center;
+  @apply inline-flex gap-3xs list-none items-center flex-wrap;
 }
 
 .dialog__share--menu a {
