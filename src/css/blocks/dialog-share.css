@@ -7,7 +7,7 @@
 }
 
 .dialog__share--wrapper {
-  @apply inline-flex items-center w-full place-content-center;
+  @apply inline-flex items-center w-full items-center;
 }
 
 .dialog__share--menu {
