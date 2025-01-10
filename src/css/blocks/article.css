@@ -4,18 +4,17 @@
 }
 
 .article__cover {
-  @apply rounded-t-2xl h-full sm:rounded-none sm:rounded-l-2xl;
+  @apply rounded-t-2xl sm:rounded-none sm:rounded-l-2xl w-full h-full object-cover aspect-square;
 }
 
 .article__header {
   @apply self-center px-m;
 }
 
-.article__author{
+.article__author {
   @apply color-primary;
 }
 
 .article__footer {
   @apply inline-flex px-m items-center w-full relative flex-wrap;
 }
-
