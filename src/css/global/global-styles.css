@@ -9,7 +9,7 @@ body {
 }
 
 .article__footer--share {
-  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:p-2 focus:outline-primary hover:color-accent hover:bg-primary z-[11] color-primary p-3 my-m w-10 h-10;
+  @apply p-3 my-m w-10 h-10 m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline-primary hover:color-accent hover:bg-primary z-[11] color-primary;
 }
 
 .article__footer--share[aria-expanded=true]{
