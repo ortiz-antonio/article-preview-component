@@ -7,7 +7,7 @@
 }
 
 .dialog__share--wrapper {
-  @apply inline-flex items-center w-full items-center;
+  @apply inline-flex items-center w-full;
 }
 
 .dialog__share--menu {
@@ -16,6 +16,10 @@
 
 .dialog__share--menu a {
   @apply p-1.5  focus:outline-primary hover:border-b-solid hover:border-b-2 hover:border-base;
+}
+
+.dialog__share-js .dialog__share--menu a {
+  @apply p-1.5  focus:outline-accent hover:border-b-solid hover:border-b-2 hover:border-accent;
 }
 
 @screen sm {

@@ -14,3 +14,4 @@
 .article__footer {
   @apply inline-flex px-m items-center w-full relative flex-wrap;
 }
+

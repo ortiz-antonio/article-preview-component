@@ -9,7 +9,11 @@ body {
 }
 
 .article__footer--share {
-  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:outline focus:color-primary z-[11] p-3 my-m;
+  @apply m-l-auto border-none bg-base-light rounded-full drop-shadow focus:p-2 focus:outline-primary hover:color-accent hover:bg-primary z-[11] color-primary p-3 my-m w-10 h-10;
+}
+
+.article__footer--share[aria-expanded=true]{
+  @apply color-accent bg-base;
 }
 
 h2 {
