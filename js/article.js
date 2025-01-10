@@ -1,17 +1,19 @@
 // Get DOM elements with type safety
-const socialShareMenu = document.getElementById('articleShare');
+const dialogShare = document.getElementById('dialogShare');
 const articleFooter = document.getElementById('articleFooter');
-let isMenuExpanded = false;
+let isDialogOpen = false;
 setDisplay();
+setDialogShareStyles();
 const buttonShare = `
     <button
       class="article__footer--share"
-      aria-label="open share menu"
+      aria-label="Share menu"
       aria-expanded="false"
       aria-controls="social-share"
       aria-haspopup="true"
     >
-      <img alt="" src="./images/icon-share.svg" width="25" height="25" />
+      <svg aria-hidden="true" focusable="false"xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+
     </button>
 `;
 if (articleFooter) {
@@ -25,18 +27,18 @@ if (articleFooter) {
   });
 }
 function toggleMenu(button) {
-  isMenuExpanded = !isMenuExpanded;
-  button.setAttribute('aria-expanded', isMenuExpanded.toString());
+  isDialogOpen = !isDialogOpen;
+  button.setAttribute('aria-expanded', isDialogOpen.toString());
   setDisplay();
 }
 function setDisplay() {
-  let display = '';
-  if (isMenuExpanded) {
-    display = 'flex';
+  if (isDialogOpen) {
+    dialogShare.show();
   } else {
-    display = 'none';
+    dialogShare.close();
   }
-  if (socialShareMenu) {
-    socialShareMenu.style.display = display;
-  }
+}
+function setDialogShareStyles() {
+  dialogShare.classList.remove('dialog__share');
+  dialogShare.classList.add('dialog__share-js');
 }

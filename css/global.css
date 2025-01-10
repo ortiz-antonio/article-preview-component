@@ -1,81 +1,86 @@
 /* Modern reset: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Box sizing rules */
+
 *,
-*::before,
-*::after {
+:after,
+:before {
   box-sizing: border-box;
 }
-/* Prevent font size inflation */
+
 html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-/* Remove default margin in favour of better control in authored CSS */
+
+blockquote,
 body,
+dd,
+dl,
+figure,
 h1,
 h2,
 h3,
 h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin-block-end: 0;
 }
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+
+ol[role="list"],
+ul[role="list"] {
   list-style: none;
 }
-/* Set core body defaults */
+
 body {
-  min-height: 100vh;
   line-height: 1.5;
+  min-height: 100vh;
 }
-/* Set shorter line heights on headings and interactive elements */
+
+button,
 h1,
 h2,
 h3,
 h4,
-button,
 input,
 label {
   line-height: 1.1;
 }
-/* Balance text wrapping on headings */
+
 h1,
 h2,
 h3,
 h4 {
   text-wrap: balance;
 }
-/* A elements that don't have a class get default styles */
+
 a:not([class]) {
+  color: currentColor;
   text-decoration-skip-ink: auto;
-  color: currentcolor;
 }
-/* Make images easier to work with */
+
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
-/* Inherit fonts for inputs and buttons */
-input,
+
 button,
-textarea,
-select {
-  font: inherit;
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
 }
-/* Make sure textareas without a rows attribute are not tiny */
+
 textarea:not([rows]) {
   min-height: 10em;
 }
-/* Anything that has been anchored to should have extra scroll margin */
+
 :target {
   scroll-margin-block: 5ex;
 }
+
 /* manrope-500 - latin */
+
 @font-face {
   font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: Manrope;
@@ -83,7 +88,9 @@ textarea:not([rows]) {
   font-weight: 500;
   src: url("../fonts/manrope-v15-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* manrope-700 - latin */
+
 @font-face {
   font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: Manrope;
@@ -91,326 +98,339 @@ textarea:not([rows]) {
   font-weight: 700;
   src: url("../fonts/manrope-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 :root {
-  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --color-desaturated-dark-blue: #677693;
-  --color-grayish-blue: hsl(212, 23%, 69%);
-  --color-light-grayish-blue: hsl(210, 46%, 95%);
-  --space-3xs: clamp(0.3125rem, 0.29rem + 0.11vw, 0.375rem);
-  --space-2xs: clamp(0.5625rem, 0.52rem + 0.23vw, 0.6875rem);
-  --space-xs: clamp(0.875rem, 0.80rem + 0.34vw, 1.0625rem);
-  --space-s: clamp(1.125rem, 1.03rem + 0.46vw, 1.375rem);
-  --space-m: clamp(1.125rem, 1.03rem + 0.46vw, 1.375rem);
-  --space-l: clamp(2.25rem, 2.06rem + 0.92vw, 2.75rem);
-  --space-xl: clamp(3.375rem, 3.09rem + 1.38vw, 4.125rem);
-  --space-2xl: clamp(4.5rem, 4.12rem + 1.84vw, 5.5rem);
-  --space-3xl: clamp(6.75rem, 6.18rem + 2.76vw, 8.25rem);
-  --space-4xl: clamp(7.875rem, 7.21rem + 3.22vw, 9.625rem);
-  --space-3xs-2xs: clamp(0.3125rem, 0.17rem + 0.69vw, 0.6875rem);
-  --space-2xs-xs: clamp(0.5625rem, 0.37rem + 0.92vw, 1.0625rem);
-  --space-xs-s: clamp(0.875rem, 0.69rem + 0.92vw, 1.375rem);
-  --space-s-m: clamp(1.125rem, 1.03rem + 0.46vw, 1.375rem);
-  --space-m-l: clamp(1.125rem, 0.51rem + 2.99vw, 2.75rem);
-  --space-l-xl: clamp(2.25rem, 1.54rem + 3.45vw, 4.125rem);
-  --space-xl-2xl: clamp(3.375rem, 2.57rem + 3.91vw, 5.5rem);
-  --space-2xl-3xl: clamp(4.5rem, 3.08rem + 6.90vw, 8.25rem);
-  --space-3xl-4xl: clamp(6.75rem, 5.66rem + 5.29vw, 9.625rem);
-  --space-s-l: clamp(1.125rem, 0.51rem + 2.99vw, 2.75rem);
-  --space-xs-m: clamp(0.875rem, 0.69rem + 0.92vw, 1.375rem);
-  --size-step-5: clamp(2.5rem, 1.86rem + 3.10vw, 4.1875rem);
-  --size-step-4: clamp(2.125rem, 1.65rem + 2.30vw, 3.375rem);
-  --size-step-3: clamp(1.8125rem, 1.48rem + 1.61vw, 2.6875rem);
-  --size-step-2: clamp(1.5625rem, 1.35rem + 1.03vw, 2.125rem);
-  --size-step-1: clamp(0.9375rem, 0.87rem + 0.34vw, 1.125rem);
-  --size-step-0: clamp(1.125rem, 1.03rem + 0.46vw, 1.375rem);
-  --leading-flat: 1;
-  --leading-fine: 1.15;
-  --leading-standard: 1.5;
-  --leading-loose: 1.7;
-  --font-base: Manrope, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-bold: 700;
-  --breakpoint-sm: 20.625rem;
-  --breakpoint-md: 47.5rem;
-  --breakpoint-lg: 75rem;
+  --color-primary: hsl(217, 19%, 35%);
+  --color-base: #425161;
 }
-#share {
-  font-size: var(--size-step-1);
-  color: var(--color-background-card);
-}
-.article {
-  display: grid;
-  border-radius: 1rem;
-  background-color: var(--color-background-card);
-  box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
-}
-.article__cover {
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-}
-.article__content {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-}
-.article__footer {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-xs);
-  width: 100%;
-}
-.article__share {
-  display: flex;
-  position: absolute;
-  left: 0;
-  z-index: 10;
-  align-items: center;
-  background-color: var(--color-primary);
-  padding-inline-start: var(--space-xs-m);
-  border-radius: 0 0 1rem 1rem;
-  width: 100%;
-  height: 100%;
-}
-.article svg {
-  color: var(--color-background-card);
-}
-.article__share--menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  list-style: none;
-}
-@media screen and (min-width: 47.5rem) {
-  .article__cover {
-    border-radius: 1rem 0 0 1rem;
-  }
 
-  .article__share {
-    top: -3.5em;
-    left: auto;
-    right: -1.5em;
-    width: 14rem;
-    height: 3em;
-
-    /* Tooltip */
-    --b: 2em; /* base */
-    --h: 1em; /* height */
-
-    --p: 60%; /* position  */
-    --r: 1rem; /* the radius */
-    --c: var(--color-primary);
-
-    border-radius: var(--r);
-    background: var(--c);
-    clip-path: polygon(
-      0 100%,
-      0 0,
-      100% 0,
-      100% 100%,
-      min(100%, var(--p) + var(--b) / 2) 100%,
-      var(--p) calc(100% + var(--h)),
-      max(0%, var(--p) - var(--b) / 2) 100%
-    );
-    border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
-      calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0 0
-      var(--h) 0;
-  }
-
-  .article {
-    grid-template-columns: 1fr 1.5fr;
-  }
-}
-.attribution {
-  text-align: center;
-  text-wrap: balance;
-  color: var(--color-primary);
-}
-.attribution__link {
-  color: var(--color-primary);
-
-  &:hover {
-    color: var(--color-primary);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
-    padding: 2px;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-}
-/*
-CLUSTER
-More info: https://every-layout.dev/layouts/cluster/
-A layout that lets you distribute items with consitent
-spacing, regardless of their size
-
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-s-m)): This defines the space
-between each item.
-
---cluster-horizontal-alignment (flex-start) How items should align
-horizontally. Can be any acceptable flexbox aligmnent value.
-
---cluster-vertical-alignment How items should align vertically.
-Can be any acceptable flexbox alignment value.
-*/
-/* 
-FLOW COMPOSITION 
-Like the Every Layout stack: https://every-layout.dev/layouts/stack/
-Info about this implementation: https://piccalil.li/quick-tip/flow-utility/ 
-*/
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
-}
-/* AUTO GRID
-Related Every Layout: https://every-layout.dev/layouts/grid/
-More info on the flexible nature: https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
-A flexible layout that will create an auto-fill grid with
-configurable grid item sizes
-
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-s-m)): This defines the space
-between each item.
-
---grid-min-item-size (14rem): How large each item should be
-ideally, as a minimum.
-
---grid-placement (auto-fill): Set either auto-fit or auto-fill
-to change how empty grid tracks are handled */
-/* A split 50/50 layout */
-/* Three column grid layout */
-/*
-REPEL
-A little layout that pushes items away from each other where
-there is space in the viewport and stacks on small viewports
-
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-s-m)): This defines the space
-between each item.
-
---repel-vertical-alignment How items should align vertically.
-Can be any acceptable flexbox alignment value.
-*/
-/* 
-SIDEBAR
-More info: https://every-layout.dev/layouts/sidebar/
-A layout that allows you to have a flexible main content area
-and a "fixed" width sidebar that sits on the left or right.
-If there is not enough viewport space to fit both the sidebar
-width *and* the main content minimum width, they will stack
-on top of each other
-
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-size-1)): This defines the space
-between the sidebar and main content.
-
---sidebar-target-width (20rem): How large the sidebar should be
-
---sidebar-content-min-width(50%): The minimum size of the main content area
-
-EXCEPTIONS
-.sidebar[data-direction='rtl']: flips the sidebar to be on the right 
-*/
-/*
-SWITCHER
-More info: https://every-layout.dev/layouts/switcher/
-A layout that allows you to lay **2** items next to each other
-until there is not enough horizontal space to allow that.
-
-CUSTOM PROPERTIES AND CONFIGURATION
---gutter (var(--space-size-1)): This defines the space
-between each item
-
---switcher-target-container-width (40rem): How large the container
-needs to be to allow items to sit inline with each other
-
---switcher-vertical-alignment How items should align vertically.
-Can be any acceptable flexbox alignment value.
-*/
-/* Max 2 items,
-so anything greater than 2 is full width */
-/*
-WRAPPER COMPOSITION 
-A common wrapper/container
-*/
-.wrapper {
-  margin-inline: auto;
-  max-width: clamp(16rem, var(--wrapper-max-width, 100vw), 80rem);
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  position: relative;
-}
-/* 
-REGION UTILITY
-Consistent block padding for page sections
-*/
-/* 
-VISUALLY HIDDEN UTILITY
-Info: https://piccalil.li/quick-tip/visually-hidden/ 
-*/
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-:root {
-  --gutter: var(--space-s-l);
-  --transition-base: 250ms ease;
-  --transition-movement: 200ms linear;
-  --transition-fade: 300ms ease;
-  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --leading-standard: 1.5;
-  --wrapper-max-width: var(--breakpoint--lg);
-
-  --color-primary: var(--color-very-dark-grayish-blue);
-  --color-base: var(--color-desaturated-dark-blue);
-  --color-base-low: var(--color-grayish-blue);
-  --color-background: var(--color-light-grayish-blue);
-  --color-background-card: white;
-}
 /* 
   Global styles 
 
   Low-specificity, global styles that apply to the whole 
   project: https://cube.fyi/css.html
 */
+
 body {
   display: grid;
   place-content: center;
-  background-color: var(--color-background);
-  color: var(--color-base);
-  font-size: var(--size-step-0);
-  font-family: var(--font-base);
-  line-height: var(--leading-standard);
+  background-color: var(--color-base-light, hsl(210, 46%, 95%));
+  font-size: var(
+    --fontSize-step-0,
+    clamp(1rem, 0.8958rem + 0.2604vw, 1.0625rem)
+  );
+  line-height: 1;
+  color: var(--color-base, hsl(214, 17%, 51%));
+  line-height: var(--lineHeight-standart, 1.5);
+  font-family: var(--fontFamily-base, Manrope, Roboto, Arial, sans-serif);
 }
+
 .article__footer--share {
-  margin-left: auto;
-  border: none;
-  padding: .6rem;
-  background-color: var(--color-background);
-  border-radius: 50%;
-  margin-block: var(--space-3xs);
   z-index: 11;
-  box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
+  margin-top: var(--spacing-m, clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem));
+  margin-bottom: var(
+    --spacing-m,
+    clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem)
+  );
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border-style: none;
+  background-color: var(--color-base-light, hsl(210, 46%, 95%));
+  padding: 0.75rem;
+  color: var(--color-primary, hsl(217, 19%, 35%));
+  --un-drop-shadow: drop-shadow(
+      0 1px 2px var(--un-drop-shadow-color, rgb(0 0 0 / 0.1))
+    )
+    drop-shadow(0 1px 1px var(--un-drop-shadow-color, rgb(0 0 0 / 0.06)));
+  filter: var(--un-blur) var(--un-brightness) var(--un-contrast)
+    var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate)
+    var(--un-invert) var(--un-saturate) var(--un-sepia);
+}
+
+.article__footer--share:hover {
+  background-color: var(--color-primary, hsl(217, 19%, 35%));
+  color: var(--color-accent, #fff);
+}
+
+.article__footer--share:focus {
+  outline-color: var(--color-primary, hsl(217, 19%, 35%));
+}
+
+.article__footer--share[aria-expanded="true"] {
+  background-color: var(--color-base, hsl(214, 17%, 51%));
+  color: var(--color-accent, #fff);
+}
+
+h2 {
+  text-wrap: wrap;
+  font-size: var(
+    --fontSize-step-2,
+    clamp(1.1385rem, 0.7948rem + 0.8593vw, 1.3447rem)
+  );
+  line-height: 1;
+  color: var(--color-primary, hsl(217, 19%, 35%));
+  line-height: var(--lineHeight-standart, 1.5);
+}
+
+h3 {
+  margin-top: 0;
+  font-size: var(
+    --fontSize-step-1,
+    clamp(1.067rem, 0.8531rem + 0.5346vw, 1.1953rem)
+  );
+  line-height: 1;
+}
+
+@layer components {
+  .article {
+    display: grid;
+    border-radius: 1rem;
+    background-color: var(--color-accent, #fff);
+    --un-shadow-color: var(--color-primary, hsl(217, 19%, 35%));
+    --un-shadow: var(--un-shadow-inset) 0 10px 15px -3px
+      var(--un-shadow-color, rgb(0 0 0 / 0.1)), var(--un-shadow-inset) 0 4px 6px
+      -4px var(--un-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow),
+      var(--un-shadow);
+    box-shadow: .5rem .5rem 1rem -.5rem rgba(0, 0, 0, 0.5);
+  }
+  @media (min-width: 640px) {
+    .article {
+      grid-template-columns: 1fr 1.6fr;
+    }
+  }
+
+  .article__cover {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+  }
+  @media (min-width: 640px) {
+    .article__cover {
+      border-radius: 0;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+  }
+
+  .article__header {
+    align-self: center;
+    padding-left: var(
+      --spacing-m,
+      clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem)
+    );
+    padding-right: var(
+      --spacing-m,
+      clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem)
+    );
+  }
+
+  .article__author {
+    color: var(--color-primary, hsl(217, 19%, 35%));
+  }
+
+  .article__footer {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: var(
+      --spacing-m,
+      clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem)
+    );
+    padding-right: var(
+      --spacing-m,
+      clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem)
+    );
   }
 }
-h2,
-h3 {
-  color: var(--color-primary);
+
+@layer components {
+  .attribution {
+    text-align: center;
+    text-wrap: balance;
+    color: var(--color-base, hsl(214, 17%, 51%));
+  }
+
+  .attribution__link {
+    color: var(--color-base, hsl(214, 17%, 51%));
+  }
+  .attribution__link:focus {
+    padding: 0.25rem;
+    color: var(--color-primary, hsl(217, 19%, 35%));
+    text-decoration: none;
+    outline-color: var(--color-primary, hsl(217, 19%, 35%));
+  }
+  .attribution__link:hover {
+    color: var(--color-primary, hsl(217, 19%, 35%));
+    text-decoration: none;
+  }
 }
+
+@layer components {
+  .dialog__share {
+    position: relative;
+    margin-right: 0;
+    height: 100%;
+    border-style: none;
+    color: var(--color-primary, hsl(217, 19%, 35%));
+  }
+
+  .dialog__share-js {
+    width: 100%;
+    height: 100%;
+    border-color: var(--color-primary, hsl(217, 19%, 35%));
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--color-primary, hsl(217, 19%, 35%));
+    color: var(--color-accent, #fff);
+  }
+
+  .dialog__share--wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dialog__share--menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .dialog__share--menu a {
+    padding: 0.375rem;
+  }
+  .dialog__share--menu a:hover {
+    border-bottom-width: 2px;
+    border-color: var(--color-base, hsl(214, 17%, 51%));
+    border-bottom-style: solid;
+  }
+  .dialog__share--menu a:focus {
+    outline-color: var(--color-primary, hsl(217, 19%, 35%));
+  }
+
+  .dialog__share-js .dialog__share--menu a {
+    padding: 0.375rem;
+  }
+  .dialog__share-js .dialog__share--menu a:hover {
+    border-bottom-width: 2px;
+    border-color: var(--color-accent, #fff);
+    border-bottom-style: solid;
+  }
+  .dialog__share-js .dialog__share--menu a:focus {
+    outline-color: var(--color-accent, #fff);
+  }
+
+  @media (min-width: 640px) {
+    .dialog__share-js {
+      top: -5.5em;
+      left: auto;
+      right: -3.3em;
+      width: 15rem;
+      height: 5em;
+
+      --b: 2em;
+      --h: 1em;
+      --p: 58%;
+      --r: 1rem;
+      --c: var(--color-primary);
+
+      border-radius: var(--r);
+      background: var(--c);
+      clip-path: polygon(
+        0 100%,
+        0 0,
+        100% 0,
+        100% 100%,
+        min(100%, var(--p) + var(--b) / 2) 100%,
+        var(--p) calc(100% + var(--h)),
+        max(0%, var(--p) - var(--b) / 2) 100%
+      );
+      border-image: conic-gradient(var(--c) 0 0) fill 0 / var(--r)
+        calc(100% - var(--p) - var(--b) / 2) 0 calc(var(--p) - var(--b) / 2) / 0
+        0 var(--h) 0;
+    }
+  }
+}
+
+@layer components {
+  .prose {
+    --flow-space: var(--space-m);
+  }
+}
+
+@layer components {
+  /* 
+FLOW COMPOSITION 
+Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+Info about this implementation: https://piccalil.li/quick-tip/flow-utility/ 
+*/
+  .flow > * + * {
+    margin-top: var(--flow-space, 1em);
+  }
+}
+
+/* layer: default */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .block {
   display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-screen-lg {
+  max-width: 1024px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.px-3xs {
+  padding-left: var(
+    --spacing-3xs,
+    clamp(0.3125rem, 0.2083rem + 0.2604vw, 0.375rem)
+  );
+  padding-right: var(
+    --spacing-3xs,
+    clamp(0.3125rem, 0.2083rem + 0.2604vw, 0.375rem)
+  );
+}
+
+@media (min-width: 640px) {
+  .sm\:px-xl {
+    padding-left: var(
+      --spacing-xl,
+      clamp(3.375rem, 2.125rem + 3.125vw, 4.125rem)
+    );
+    padding-right: var(
+      --spacing-xl,
+      clamp(3.375rem, 2.125rem + 3.125vw, 4.125rem)
+    );
+  }
 }
